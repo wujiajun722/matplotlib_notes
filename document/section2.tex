@@ -1,0 +1,115 @@
+\section{patches}
+	在matplotlib中,patches模块提供了许多用于绘制图形元素的类.这些类可以用来创建各种形状,如矩形、圆形、椭圆等.以下是一些常用的patches类:
+	\begin{itemize}
+		\item \texttt{Rectangle}: 用于绘制矩形.
+		\item \texttt{Circle}: 用于绘制圆形.
+		\item \texttt{Ellipse}: 用于绘制椭圆.
+		\item \texttt{Polygon}: 用于绘制多边形.
+	\end{itemize}
+	
+	例如,我们可以使用patches.Rectangle来创建一个正方形:
+	\lstinputlisting[language=python]{../code/section2/2.1.py}
+	
+	运行上述代码,将会显示一个包含正方形的图形窗口.如下所示:
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.8\linewidth]{../figures/section2/2.1.png}
+		\caption{正方形示例}
+		\label{fig:rectangle_example}
+	\end{figure}
+	\subsection{矩形}
+	上面的例子已经展示了如何使用$patches.Rectangle$来创建一个矩形.我们还可以通过设置不同的参数来调整矩形的属性,如颜色、边框宽度等.
+	\lstinputlisting[language=python]{../code/section2/2.2.py}
+	运行上述代码,将会显示一个包含自定义矩形的图形窗口.如下所示:
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.8\linewidth]{../figures/section2/2.2.png}
+		\caption{自定义矩形示例}
+		\label{fig:custom_rectangle}
+	\end{figure}
+	
+	\subsection{三角形}
+	我们可以使用$patches.Polygon$来创建一个三角形.以下是一个示例:
+	\lstinputlisting[language=python]{../code/section2/2.3.py}
+	运行上述代码,将会显示一个包含三角形的图形窗口.如下所示:
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.8\linewidth]{../figures/section2/2.3.png}
+		\caption{三角形示例}
+		\label{fig:triangle_example}
+	\end{figure}
+	这样绘制的三角形是已知顶点坐标的.如果是只知道两条边长和其中的夹角,可以通过计算得到其他两个顶点的坐标.
+	\subsubsection{边角边画三角形}
+	举个例子,假设已知三角形的一条边长为$a$,另一条边长为$b$,夹角为$\theta$,则可以通过以下代码计算出其他两个顶点的坐标并绘制三角形:
+	\lstinputlisting[language=python]{../code/section2/2.4.py}
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.8\linewidth]{../figures/section2/2.4.png}
+		\caption{三角形示例2}
+		\label{fig:triangle_example2}
+	\end{figure}
+	\subsubsection{向量}
+	还可以使用向量在图像中需找特殊点,测量边长,测量角,绘制角平分线.
+	\lstinputlisting[language=python]{../code/section2/2.5.py}
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.8\linewidth]{../figures/section2/2.5.png}
+		\caption{三角形示例3}
+		\label{fig:triangle_example3}
+	\end{figure}
+	\subsubsection{三边画三角形}
+	如果知道三条边的长度a,b,c,也可以用于绘制三角形.
+	\lstinputlisting[language=python]{../code/section2/2.6.py}
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.8\linewidth]{../figures/section2/2.6.png}
+		\caption{三角形示例4}
+		\label{fig:triangle_example4}
+	\end{figure}
+
+	\subsubsection{角边角画三角形}
+	知道三角形的两个角,和两角中间的边长,也可以绘制三角形.可以运用正弦定理:
+	
+	$\frac{a}{\sin A} = \frac{b}{\sin B} = \frac{c}{\sin C}$
+	用下面的例子绘图:
+	\lstinputlisting[language=python]{../code/section2/2.7.py}
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.8\linewidth]{../figures/section2/2.7.png}
+		\caption{三角形示例5}
+		\label{fig:triangle_example5}
+	\end{figure}
+
+	\subsection{角}
+	\lstinputlisting[language=python]{../code/section2/2.8.py}
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.8\linewidth]{../figures/section2/2.8.png}
+		\caption{角}
+		\label{fig:angle}
+	\end{figure}
+
+	\subsection{圆形和椭圆}
+	\lstinputlisting[language=python]{../code/section2/2.9.py}
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.8\linewidth]{../figures/section2/2.9.png}
+		\caption{圆形和椭圆}
+		\label{fig:angle}
+	\end{figure}
+	\subsection{扇形}
+	\lstinputlisting[language=python]{../code/section2/2.10.py}
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.8\linewidth]{../figures/section2/2.10.png}
+		\caption{扇形}
+		\label{fig:angle}
+	\end{figure}
+	plt也可以绘制扇形饼图
+	\lstinputlisting[language=python]{../code/section2/2.11.py}
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.8\linewidth]{../figures/section2/2.11.png}
+		\caption{扇形饼图}
+		\label{fig:angle}
+	\end{figure}

@@ -1,0 +1,5 @@
+plt.plot(x, y)  # 绘制图形
+plt.xlabel('X轴标签')  # 设置X轴标签
+plt.ylabel('Y轴标签')  # 设置Y轴标签
+plt.title('图形标题')  # 设置图形标题
+plt.show()  # 显示图形

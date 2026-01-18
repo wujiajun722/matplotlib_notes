@@ -1,0 +1,125 @@
+\documentclass[15pt,twocolumn]{ctexart}
+
+\usepackage{amsmath, amsthm, amssymb, appendix, bm, graphicx, mathrsfs}
+\usepackage{verbatim}
+\usepackage[hidelinks]{hyperref}
+\usepackage{listings} 
+\usepackage{xcolor} 
+\usepackage{subfigure}				%同时多个插图
+\usepackage{fontspec}
+\usepackage{asymptote}
+\usepackage{draftwatermark}         % 所有页加水印
+\usepackage{geometry}
+\usepackage{media9}
+\usepackage{multimedia}
+\geometry{a4paper,centering,scale=0.8}
+\usepackage{float}
+%\usepackage[firstpage]{draftwatermark} % 只有第一页加水印
+\SetWatermarkText{$W^uJ^{ia}J^{un}$}           % 设置水印内容
+%\SetWatermarkText{\includegraphics{fig/texlion.png}}         % 设置水印logo
+\SetWatermarkLightness{0.9}             % 设置水印透明度 0-1
+\SetWatermarkScale{1} 
+\usepackage{pifont}					%插入带有圈的数字例如\ding{172}
+\usepackage{caption}				%插入无编号的图
+\usepackage{fancyhdr} % 引入fancyhdr宏包
+
+
+% 按章节重置图片编号（如图1.1）
+\counterwithin{figure}{section}
+\pagestyle{fancy} % 设置页面风格为fancy
+\fancyhf{} % 清除默认页眉页脚设置
+\fancyhead[L]{$\alpha \beta \gamma \delta \epsilon $\\$\rho \sigma \phi \psi \omega $} % 在页眉左边设置文本
+\fancyhead[C]{\href{https://gitee.com/Wjj0123/matplotlib_notes}{中页眉}} % 在页眉中间设置文本
+\fancyhead[R]{$matplotlib\  notes$} % 在页眉右边设置文本
+\fancyfoot[C]{\thepage} % 在页脚中间设置页码
+\renewcommand{\headrulewidth}{0.4pt} % 页眉下方的横线粗细
+\renewcommand{\footrulewidth}{0pt} % 页脚横线粗细（这里设置为0pt表示没有横线）
+% 全局设置
+\lstdefinestyle{myStyle}{
+	language=Python,
+	basicstyle=\ttfamily, % 基本代码样式
+	keywordstyle=\color{blue},  % 关键字样式
+	stringstyle=\color{red},   % 字符串样式
+	commentstyle=\color{gray}, % 注释样式
+	morecomment=[l][\color{magenta}]{\#}, % Python注释样式
+	basicstyle={\tiny}, % 基本代码字体大小
+	numbers=left, % 显示行号在左侧
+	numbersep=5pt, % 行号与文本之间的间距
+	frame=single, % 单边框
+	framerule=0.4pt, % 边框线条宽度
+	rulecolor=\color{black}, % 边框线条颜色
+	xleftmargin=1em, % 左边空白区域大小
+	breaklines=true, % 长行换行
+	showspaces=false, % 不显示空格符
+	showtabs=false, % 不显示制表符
+	tabsize=2, % 制表符占位数
+	backgroundcolor=\color{white!50}, % 背景颜色
+	aboveskip=3pt, % 代码块上方间距
+	belowskip=3pt,	 % 代码块下方间距
+	columns=fullflexible, % 字符间距
+	linewidth=1\linewidth, % 代码块宽度
+}
+
+\lstset{
+	style=myStyle,
+}
+
+\hypersetup{
+	hidelinks,
+	colorlinks = true,
+	allcolors=black,
+	pdfstartview=Fit,
+	breaklinks=true
+}
+
+
+\ctexset{
+	%chapter = {name = {第,章},number = \chinese{chapter}},
+	section = {name= {\S,、},number = \arabic{section}},
+	subsection = {name = {,、},number = \arabic{subsection}},
+	subsubsection = {name = {,、},number = \arabic{subsection}.\arabic{subsubsection}}
+}
+\title{\textbf{\huge matplotlib\\笔记本}}
+\author{吴嘉军}
+\date{\today}
+\linespread{1.4}
+\newtheorem{theorem}{定理}[section]
+\newtheorem{definition}[theorem]{定义}
+\newtheorem{lemma}[theorem]{引理}
+\newtheorem{corollary}[theorem]{推论}
+\newtheorem{example}[theorem]{例}
+\newtheorem{proposition}[theorem]{命题}
+\renewcommand{\abstractname}{\Large\textbf{摘要}}
+
+
+\begin{document}
+	\setcounter{page}{0}
+	\maketitle
+	\thispagestyle{empty}
+		\begin{abstract}
+		这里是摘要
+		\par\textbf{关键词：}这里是关键词1、关键词2
+	\end{abstract}
+	\newpage
+	\pagenumbering{Roman}
+	\setcounter{page}{1}
+	\tableofcontents
+	\newpage
+	\setcounter{page}{1}
+	\pagenumbering{arabic}
+	
+	\include{section1.tex}
+	\include{section2.tex}
+	\include{section3.tex}
+
+	
+
+
+
+
+	\newpage
+	\begin{thebibliography}{99}
+		\bibitem{matplotlib} Matplotlib官方文档, \url{https://matplotlib.org/stable/contents.html}
+		\bibitem{numpy} NumPy官方文档, \url{https://numpy.org/doc/}
+	\end{thebibliography}	
+\end{document}

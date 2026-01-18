@@ -1,0 +1,7 @@
+# matplotlib_notes
+这是我的一个关于matplotlib学习笔记
+
+代码在code文件夹里
+图片在figures文件夹里
+文档在document文件夹里,可以在这里看pdf文件
+

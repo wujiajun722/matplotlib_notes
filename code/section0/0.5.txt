@@ -1,0 +1,4 @@
+import matplotlib.pyplot as plt
+from matplotlib import rcParams
+rcParams['font.sans-serif'] = ['SimHei']  # 全局设置中文字体为黑体	
+rcParams['axes.unicode_minus'] = False  # 解决负号显示问题
