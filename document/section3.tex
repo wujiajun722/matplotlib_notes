@@ -1,6 +1,8 @@
 \section{隐函数}
 	matplotlib也可以按照隐函数进行绘图.
+	这里主要提供两种方法进行画图
 	\subsection{圆锥曲线标准方程}
+	
 	$\frac{x^2}{a^2} + \frac{y^2}{b^2} = 1$
 	\lstinputlisting[language=python]{../code/section3/3.1.py}
 	\begin{figure}[H]
@@ -21,14 +23,19 @@
 		\caption{抛物线}
 		\label{fig:example}
 	\end{figure}
-	\subsection{例题}
-	已知线段AB=6,直线AM和BM相交于M点,且他们的斜率之积为$\frac{4}{9}$,求点M的轨迹
-	\lstinputlisting[language=python]{../code/section3/3.4.py}
+	以上可以看出画图的方式是用到了contour绘制等高线的方式.下面我们还可以用到sympy库,利用
+	sympy可以直接解出y与x的关系表达式:$y = f(x)$
+	\subsection{圆锥曲线一般方程}
+	圆锥曲线一般方程:
+	\begin{align*}
+		Ax^2 + Bxy + Cy^2 + Dx + Ey + F = 0
+	\end{align*}
+	用圆锥曲线的一般方程来绘制一些图片
+	\lstinputlisting[language=python]{../code/section3/3.5.py}
 	\begin{figure}[H]
 		\centering
-		\includegraphics[width=0.8\linewidth]{../figures/section3/3.4.png}
-		\caption{例题}
+		\includegraphics[width=0.8\linewidth]{../figures/section3/3.5.png}
+		\caption{椭圆}
 		\label{fig:example}
 	\end{figure}
-	由图可以看出,当斜率乘积是整正数时候就是双曲线,当斜率乘积为负数时候,就是椭圆.
-	\subsection{例题}
+	
