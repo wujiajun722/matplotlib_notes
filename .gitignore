@@ -4,6 +4,4 @@ document/matplotlib_notes.out
 document/matplotlib_notes.pre
 document/matplotlib_notes.synctex.gz
 document/matplotlib_notes.toc
-document/section1.aux
-document/section2.aux
-document/section3.aux
+document/*.aux
