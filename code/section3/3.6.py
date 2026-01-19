@@ -22,18 +22,20 @@ x_vals = np.linspace(-5, 5, 2000)
 for i, sol in enumerate(y1):
     y_func = sp.lambdify(x, sol, 'numpy')
     y_vals = y_func(x_vals)
-    ax.plot(x_vals, y_vals,color = 'red')
+    ax.plot(x_vals, y_vals,color = 'purple')
     
 
 for i, sol in enumerate(y2):
     y_func = sp.lambdify(x, sol, 'numpy')
     y_vals = y_func(x_vals)
-    ax.plot(x_vals, y_vals,color = 'red')
+    ax.plot(x_vals, y_vals,color = 'blue')
     
 
 # 寻找交点
 for result in results:
     plt.plot(*result,'ro')
 
-
+# 文件保存
+script_name = os.path.splitext(os.path.basename(__file__))[0]
+plt.savefig("figures/section3/" + script_name + '.png')
 plt.show()

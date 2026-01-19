@@ -1,0 +1,33 @@
+\section{sympy库}
+sympy是python的一个库,可以帮忙带着符号进行运算.下面用几个例子来说明.
+    \subsection{sympy解方程}
+    \lstinputlisting[language=python]{../code/section4/4.1.py}
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.8\linewidth]{../figures/section4/4.1.png}
+		\caption{解方程}
+		\label{fig:example}
+	\end{figure}
+    \subsection{sympy解二元方程}
+    \lstinputlisting[language=python]{../code/section4/4.2.py}
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.8\linewidth]{../figures/section4/4.2.png}
+		\caption{解方程}
+		\label{fig:example}
+	\end{figure}
+    \subsection{含参方程}
+    例如有一个方程,ax + b = 0,求解出x的表达式:
+    \begin{align*}
+        x = \frac{-b}{a}
+    \end{align*}
+    利用sympy也可以方便的求解.
+    \lstinputlisting[language=python]{../code/section4/4.3.py}
+	一元二次方程$ax^2 + bx + c = 0$也可以求解
+	\lstinputlisting[language=python]{../code/section4/4.4.py}
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.8\linewidth]{../figures/section4/4.4.png}
+		\caption{含参方程}
+		\label{fig:example}
+	\end{figure}
